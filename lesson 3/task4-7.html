@@ -11,17 +11,17 @@
     var arr0 = [1, 2, 3, 4, 5, 6, 7,8,9,10];
     document.write("Статовий массив: " + arr0 +"<br/>");
     var arr4 = arr0.splice(3, 7); 
-    document.write("Task 4 Масив уменьшенный с 3-го: " + arr0 + "<br/>");
+    document.write("Task 4 Масив уменьшенный с 3-го: " + arr0 + "<br/>"); //и используя метод splice удалить значения все начиная от 3 го 
     document.write("Масив те що вирізали з стартового: " + arr4 + "<br/>");
     var firth = prompt('Введіть 1ий елемент який треба додати до масиву ( наприклад 1,2,3,ыфвф,ыфв,)');
     var second = prompt('Введіть 2ий елемент який треба додати до масиву ( наприклад 1,2,3,ыфвф,ыфв,)');
     var third = prompt('Введіть 3ий елемент який треба додати до масиву ( наприклад 1,2,3,ыфвф,ыфв,)');
     arr4.splice(0,0,firth+","+second+","+third ); 
-    document.write("task 5.Введені значення+ видалений масив : " + arr4 +"<br/>");
+    document.write("task 5.Введені значення+ видалений масив : " + arr4 +"<br/>");//Добавить 3 новых значения до удаленных методом splice
     var arr6 = arr4.slice(3, 5); 
-    document.write("task 6.Масив вырезанный из центра: " + arr6 + "<br/>");
+    document.write("task 6.Масив вырезанный из центра: " + arr6 + "<br/>");//Используя метод slice вырезать 2 значения с центра массива
     var arr7 = arr6.concat(firth,second,third  );
-    document.write("task 7.Масив с присоединенным: " + arr7 + "<br/>");
+    document.write("task 7.Масив с присоединенным: " + arr7 + "<br/>");//Увеличить существующий масив с помощью метода concat и развернуть все значения используя метод reverse
     arr7.reverse();
     document.write(" Масив після .reverse(): " + arr7 + "<br/>");
     </script>
