@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function add(a, b) {
+            return (a + b);
+        };
+
+        function sub (a, b){
+            return (a - b)
+        };
+
+        function mul (a, b){
+            return (a * b)
+        };
+
+        function div (a, b){
+            if (b == 0) {
+                document.write("заборонено діленя на 0");
+                throw "stop";
+
+            } else {
+                return (a / b);
+            }
+        };
+
+        for (var i = 0; i < 10; i++) {
+            i = confirm("Потрібні послуги калькулятора?");
+            if (i == true) {
+                var a = Number(prompt("Введіте перше значення :", ""));
+                var b = Number(prompt("Введіте друге значення :", ""));
+                var aref = prompt("Яку арефметичну дію виконати: (1-додавання, 2-віднімання, 3-множеня 4-ділення) ?: ",
+                    "");
+                var result = 0;
+                if (aref == "1") {
+                    result = add(a, b);
+                    var operator = "+";
+                } else if (aref == "2") {
+                    result = sub(a, b);
+                    var operator = "-";
+                } else if (aref == "3") {
+                    result = mul(a, b);
+                    var operator = "*";
+                } else {
+                    result = div(a, b);
+                    var operator = "/";
+                }
+                document.write("Рішення: " + a + " " + operator + " " + b + "= " + result + "<br/>");
+            } else {
+                throw "stop";
+            }
+        }
+    </script>
+</body>
+
+</html>
