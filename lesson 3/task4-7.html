@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    var arr0 = [1, 2, 3, 4, 5, 6, 7,8,9,10];
+    document.write("Статовий массив: " + arr0 +"<br/>");
+    var arr4 = arr0.splice(3, 7); 
+    document.write("Task 4 Масив уменьшенный с 3-го: " + arr0 + "<br/>");
+    document.write("Масив те що вирізали з стартового: " + arr4 + "<br/>");
+    var firth = prompt('Введіть 1ий елемент який треба додати до масиву ( наприклад 1,2,3,ыфвф,ыфв,)');
+    var second = prompt('Введіть 2ий елемент який треба додати до масиву ( наприклад 1,2,3,ыфвф,ыфв,)');
+    var third = prompt('Введіть 3ий елемент який треба додати до масиву ( наприклад 1,2,3,ыфвф,ыфв,)');
+    arr4.splice(0,0,firth+","+second+","+third ); 
+    document.write("task 5.Введені значення+ видалений масив : " + arr4 +"<br/>");
+    var arr6 = arr4.slice(3, 5); 
+    document.write("task 6.Масив вырезанный из центра: " + arr6 + "<br/>");
+    var arr7 = arr6.concat(firth,second,third  );
+    document.write("task 7.Масив с присоединенным: " + arr7 + "<br/>");
+    arr7.reverse();
+    document.write(" Масив після .reverse(): " + arr7 + "<br/>");
+    </script>
+</body>
+</html>
