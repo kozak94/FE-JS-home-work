@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+     
+      function prostoe(){    
+       if (( n % 2 == 0)&&( n != 2)) { 
+          document.write(n +" - складне число" + "<br>");
+       }
+       else if (n==2){
+          document.write(n + " -  просте число" + "<br>");
+       }
+       else { 
+          k=Math.round(Math.sqrt(n));     
+          var result = false;
+       }
+       for ( i= 3; i <= k; i+= 2) { 
+          if ((n % i) == 0) {
+             document.write(n +" - складне число" + "<br>");
+             result = true;
+             break;
+          }
+       } 
+       if (result == false){
+         document.write(n + " - просте число" + "<br>");
+       }
+     }   
+   
+     for (var i=0; i<1; i++) {
+       i = confirm ("Провірити чи є число простим?");
+       if ( i == true){
+           var n = prompt ("Введіть число:","1..100");   
+           n = parseInt(n);
+           prostoe();
+           document.write( "<hr>");
+       }
+       else {
+        throw "stop";
+       }
+     }  
+    </script>
+</body>
+</html>
