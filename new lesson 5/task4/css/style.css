@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    display: none;
+    
+}
+ul{
+    list-style: none;
+
+}
+nav{
+   position: absolute;
+   right: 50%;
+   top:25%; 
+    padding: auto;
+}
+button{
+    padding: 15px;
+}
