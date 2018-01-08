@@ -12,7 +12,7 @@ window.onload = function () {
         function(e) {
             
             p1.style.backgroundColor = "red";
-            alert("Обработчик p1");
+           
             // прекращение дальнейшего маршрута события.
             e.stopPropagation();
         },
@@ -21,7 +21,7 @@ window.onload = function () {
     e2.addEventListener("click",
         function (e) {
             p2.style.backgroundColor = "green";
-            alert("Обработчик p2");
+            
             e.stopPropagation();
         },
     false);
@@ -29,7 +29,7 @@ window.onload = function () {
     e3.addEventListener("click",
         function (e) {
             p3.style.backgroundColor = "blue";
-            alert("Обработчик p3");
+            
 
         },
     false);
