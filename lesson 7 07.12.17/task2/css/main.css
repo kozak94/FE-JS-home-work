@@ -1,0 +1,19 @@
+section#form-set {
+    width: 600px;
+    margin: 50px auto;
+    padding: 15px;
+    border: 2px solid green;
+    border-radius: 5px;
+}
+
+#price {
+    padding: 0 5px;
+}
+
+.error {
+    background-color: Pink;
+}
+
+.right {
+    background-color: LightGreen;
+}

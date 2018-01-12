@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lesson 7 | task2</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="js/main.js"></script>
+</head>
+
+<body>
+    <section name="form-set" id="form-set">
+        <form id="SingUp" class="container" name="SingUp">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputName">Імя</label>
+                    <input type="text" class="form-control is-invalid" name="inputName" id="inputName" placeholder="Имя">
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="inputSName">Прізвище</label>
+                    <input type="text" class="form-control is-invalid" name="inputSName" id="inputSName" placeholder="Имя">
+                </div>
+
+            </div>
+            <div class="form-group row">
+
+                <div class="col-sm-11">
+                    <label for="inputEmail" class="col-form-label">Email</label>
+                    <input type="text" class="form-control is-invalid" name="inputEmail" id="inputEmail" placeholder="email@example.com">
+                </div>
+                <div class="col-md-6">
+                    <label for="inputPass">Пароль</label>
+                    <input type="password" class="form-control is-invalid" name="inputNumber" id="inputPass">
+                </div>
+            </div>
+
+
+            <div class="form-row align-items-center">
+                <div class="col-auto">
+                    <label class="mr-sm-2" for="size">Виберіть країну</label>
+                    <select class="custom-select mb-2 mr-sm-2 mb-sm-0" id="size">
+                        <option selected name="size" value="50 uah">Україна</option>
+                        <option name="size" value="100 uah">Польша</option>
+                        <option name="size" value="150 uah">Китай</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col"><label for="checkbox" class="checkbox"><input type="checkbox" name="checkbox" id="inputCheckbox"> Ознайомлений з правилами сайту</label></div>
+            </div>
+
+            <div class="form-group row">
+                <div class="col">
+                    <button class="btn btn-warning" id="submit">Реєстрація</button>
+                </div>
+            </div>
+            <span id="massege"> </span>
+        </form>
+    </section>
+    <div id="sucses"></div>
+
+
+</body>
+
+</html>
