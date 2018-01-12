@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function addedHor() {
+            changeX = document.getElementById("ellipse").getAttribute("rx");
+
+            var value = changeX + 10;
+            
+            document.getElementById("ellipse").setAttribute("rx", value);
+        }
+
+        function addedVert() {
+            changeY = document.getElementById("ellipse").getAttribute("ry");
+            var y = changeY;
+
+            var value = y + 10;
+
+            document.getElementById("ellipse").setAttribute("ry", value);
+
+        }
+    </script>
+    <div>
+        <button onclick="addedHor();">Add Size Horizontal</button>
+        <button onclick="addedVert();">Add Size Vertical</button>
+    </div>
+
+    <svg height="1000 " width="1000">
+        <ellipse id="ellipse" cx="150" cy="150" rx="80" ry="50" style="fill:rgb(120, 197, 31);stroke:rgb(50, 11, 139);stroke-width:2"
+        />
+    </svg>
+    </div>
+
+</body>
+
+</html>

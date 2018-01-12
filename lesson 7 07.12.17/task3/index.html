@@ -4,13 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
-    <script src="js/main.js"></script>
+    <script src="js/main.js" ></script>
     <title>Canvas Lesson 7</title>
    
 <body>
-   <canvas id="canvas"  height="300"  width="300" style="border: solid 1px black;">Your browser does not support the HTML5 canvas tag.
+   <canvas id="myCanvas" width="300" height="300" style="border:1px solid #d3d3d3;">
+    Your browser does not support the HTML5 canvas tag.</canvas>
 
-   </canvas>
-    
+<script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+    ctx.fillStyle = "#220022"; //red
+    ctx.beginPath();
+    ctx.arc(150, 150, 100, 0, Math.PI * 2, true);
+    ctx.closePath();
+    ctx.fill();
+</script>
 </body>
 </html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <img id="img" alt="random animal">
+    </div>
+    <button onclick="firthimg()">firth img</button>
+    <button onclick="secondimg()">second img</button>
+    <button onclick="thirdimg()">Third img</button>
+   
+
+    <script>
+        function firthimg() {
+            document.getElementById("img").setAttribute( "scr", "https://dummyimage.com/150x150/000/fff&text=1")
+        }
+
+        function secondimg() {
+            document.getElementById("img").setAttribute( "scr", "https://dummyimage.com/150x150/000/fff&text=2")
+        }
+
+        function thirdimg() {
+            document.getElementById("img").setAttribute( "scr", "https://dummyimage.com/150x150/000/fff&text=3")
+        }
+        
+
+    </script>
+</body>
+
+</html>
