@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .incorrect {
+            border: 1px solid red;
+            background: lightcoral;
+        }
+
+        .correct {
+            border: 1px solid green;
+            background: lightgreen;
+        }
+    </style>
+    <input type="text">
+    <script>
+        $('input:text').blur(function action() {
+            if (!this.value) {
+                $(this).addClass('incorrect').removeClass('correct')
+            } else {
+                $(this).addClass('correct').removeClass('incorrect')
+            }
+            
+        });
+    </script>
+</body>
+
+</html>

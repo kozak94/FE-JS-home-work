@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <input type="text" name="name" id="one">
+        <input type="text" name="Sname" id="two">
+        <input type="text" name="age" id="three">
+        <input type="button" value="Autocomplite" onclick="autocomplete">
+    </div>
+    <script>
+        $(document).ready(function () {
+            var CardInfo = {
+                name : "Mike",
+                surname: 'Ekim',
+                age: "22"
+
+            }
+            var data = JSON.stringify(CardInfo);
+            var obj = JSON.parse(data);
+
+            function autocomplete() {
+                $('#one').text(obj.name);
+                $('#two').text(obj.surname);
+                $('#three').text(obj.age);
+            };
+
+            // $('button').on('click', function () {
+            //     $('input[name="name"]').attr('value', 'obj.name');
+            //     $('label[name="name"]').text(obj.name);
+            //     $('input[name="surname"]').attr('value', 'obj.surname');
+            //     $('label[name="surname"]').text(obj.surname);
+            //     $('input[name="date"]').attr('value', 'obj.date');
+            //     $('label[name="date"]').text(obj.date);
+            // 
+        });
+    </script>
+</body>
+
+</html>
