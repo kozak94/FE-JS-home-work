@@ -1,6 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,14 +8,38 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <title>Document</title>
 </head>
-<body>
-    <div style="background: green">
 
-    </div>
+<body>
+    <div id="one"></div>
+    <span>Введіть номер</span>   <input type="text" name="" id="txt_name">
+    <button>get content</button>
+    <div id="content"></div>
     <script>
-        $(document).ready(function () {
-               $('div').css('height', '100vh');
+ $(document).ready(function(){ 
+     $("button").click(function(){ 
+         var root = 'https://jsonplaceholder.typicode.com/photos/1'; // прошу достати 1 фотку, а виводить по 5ть
+         var value = $("#txt_name").val(); 
+          // неможу придумати перевірку для пустого інпута щоб не виводело 5000 undefine
+         
+         $.ajax({
+              type: 'GET',
+               url: root + value,
+               dataType: 'json',
+                success: function(objData) {
+                     console.log(objData); 
+                     for(var i in objData) { 
+                         $(document.body).append("<div><p>"+ objData.id + objData.title + "</p>"+ '<img src="' + objData.thumbnailUrl + '" alt="avatar" />'+ "</div>");
+                          console.log(i + objData); 
+                          } 
+                        } 
+                     }).then(function(data) { console.log(data); 
+                    });
+                });
             });
+
+
+            // Питання чому виводиться по 5 елементів?
     </script>
 </body>
+
 </html>
