@@ -9,13 +9,26 @@
     <title>Document</title>
 </head>
 <body>
-    <div style="background: green">
+    <div id="one">
 
     </div>
+    <button id="addP">Додати параграф</button>
+
     <script>
         $(document).ready(function () {
-               $('div').css('height', '100vh');
-            });
+
+            $('#addP').on('click',addParagraf);
+            function addParagraf() {
+            var countP = $('p').length;
+            if (countP<3){
+                $('#one').append('<p>Paragraf</p>');
+              }
+            else{
+                $('#addp').off('click',addParagraf);
+              }
+
+            };
+        });
     </script>
 </body>
 </html>

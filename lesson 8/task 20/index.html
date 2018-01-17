@@ -9,13 +9,31 @@
     <title>Document</title>
 </head>
 <body>
-    <div style="background: green">
-
+    <input type="text" name="" id="text">
+    <input type="button" value='добавить в начало списку' name="" id="starList">
+    <input type="button" value='добавить в кінець списку' name="" id="endList">
+    <div >
+        <ul id="list">
+            <li>some text</li>
+        </ul>
     </div>
+    
     <script>
-        $(document).ready(function () {
-               $('div').css('height', '100vh');
-            });
+       $(document).ready(function () {
+            $("#starList").on("click", before);
+            function before() {
+                var a = $("#text").val();
+                $("#list").prepend("<li>" + a + "</li>");
+            }
+
+            $("#endList").on("click", after);
+            function after() {
+                var a = $("#text").val();
+                $("#list").append("<li>" + a + "</li>");
+            }
+           
+
+        });
     </script>
 </body>
 </html>

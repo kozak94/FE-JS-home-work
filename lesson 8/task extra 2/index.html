@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <title>Список задач</title>
+</head>
+<body>
+    <style>
+      
+		.false{
+			border:5px solid red;
+			background-color: yellow;
+		}
+		.true{
+			background-color:green;
+			border:5px solid green;
+		}
+		p{
+			
+            width: 50%;
+			margin-left: 10px;
+		}
+		.picked{
+			background-color: green ;
+		}
+		li{
+			cursor: default;
+		}
+		
+    </style>
+
+    <h1>
+        Список задач</h1>
+    <p>Напишіть першу задачу в поле внизу. Програма створить список з ваших планів. Коли успішно виконаєте одне з них - просто натисніть на завдання і воно стане зеленим це значить що воно виконане. Не виконані завдання можна видалити натиснувши на кнопу біля них </p>
+    <input type="text">
+    <button id="add">Добавить задачу</button>
+    <span></span>
+    <div>
+        <ul></ul>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+                $('input').blur(function () {
+                    if (!this.value) {
+                        $(this).addClass('false')
+                            .removeClass('true');
+                        $("span").text("Заплануйте щось");
+                        $("#add").remove("click", list);
+                    }
+                    else {
+                        $(this).addClass('true')
+                            .removeClass('false');
+                        $("span").text("");
+                        $("#add").one("click", list);
+                    }
+                });
+                function list() {
+                    var inputVal = $("input").val();
+                    var li = $("<li></li>");
+                    $("ul").append(li.text(inputVal))
+                        .append("<button class='delete'> Видалити </button>");
+                    $("li").on("click", change);
+
+                }
+                function change() {
+                    $(this).addClass('picked');
+                }
+                $('ul').on("click", ".delete", function () {
+                    $(this).prev('li').remove();
+                    $(this).remove();
+                });
+
+            });
+    </script>
+</body>
+</html>
