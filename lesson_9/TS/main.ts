@@ -10,7 +10,7 @@ var a:number;
 a =1;
 console.log(a);
 
-var stringValue :any = 1111;
+var stringValue :string = 1111;
 
 var  stringValue = "1";
 var numberValue = 1;

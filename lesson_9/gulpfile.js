@@ -7,11 +7,11 @@ var babel = require("gulp-babel");
 
 
 var paths = {
-    es:['ES6/var.js']
+    es:['src/ES6/var.js']
 };
 
 gulp.task("default", function () {
-    return gulp.src("ES6/*.js")
+    return gulp.src("src/ES6/*.js")
         .pipe(babel())
         .pipe(gulp.dest("CompileES6"));
 });
